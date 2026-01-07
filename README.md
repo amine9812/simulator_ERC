@@ -1,4 +1,4 @@
-# Hadak Micromouse Studio (v2)
+# Hadak Micromouse Studio (v1.11.34)
 
 A fresh UI + architecture for a Micromouse simulator that preserves the same
 controller protocol and maze formats as the original mms project.
