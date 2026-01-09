@@ -1,4 +1,22 @@
+<<<<<<< HEAD
 # Hadak Micromouse Studio (v1.11.34)
+=======
+# Hadak Micromouse Studio (v2)
+
+A fresh UI + architecture for a Micromouse simulator that preserves the same
+controller protocol and maze formats as the original mms project.
+
+## Features
+
+- Same bot/controller API and maze formats as the original simulator
+- New UI layout with live debug panel, overlays, and event log
+- Step/Play/Pause controls + speed slider
+- Load/save mazes in `.map` / `.num` formats
+- Random maze generation with deterministic seed
+- Click-to-edit maze walls
+- Example flood-fill bot
+- Core engine tests (movement, collision, parsing, generation)
+>>>>>>> ea7b6d2 (Add Hadak micromouse simulator v2)
 
 ## Prerequisites (Ubuntu)
 
@@ -49,11 +67,19 @@ make
 ../bin/tests
 ```
 
+<<<<<<< HEAD
 ## Controller API 
+=======
+## Controller API (same as original)
+>>>>>>> ea7b6d2 (Add Hadak micromouse simulator v2)
 
 Bots communicate via stdin/stdout. Valid commands include:
 
 - `mazeWidth`, `mazeHeight`
+<<<<<<< HEAD
+=======
+- `goalCount`, `goalCell <index>`, `isGoal`
+>>>>>>> ea7b6d2 (Add Hadak micromouse simulator v2)
 - `wallFront [N]`, `wallLeft [N]`, `wallRight [N]`, `wallBack [N]`
 - `wallFrontLeft [N]`, `wallFrontRight [N]`, `wallBackLeft [N]`, `wallBackRight [N]`
 - `moveForward [N]`, `moveForwardHalf [N]`
@@ -84,7 +110,11 @@ Then click **Start Bot** and **Play**.
 
 ## Maze formats
 
+<<<<<<< HEAD
 - `.map` ASCII format 
+=======
+- `.map` ASCII format (same as the original mms)
+>>>>>>> ea7b6d2 (Add Hadak micromouse simulator v2)
 - `.num` format: `X Y N E S W` (1 = wall, 0 = open)
 
 ## Project Structure
@@ -95,4 +125,30 @@ Then click **Start Bot** and **Play**.
 - `tests`: engine tests
 - `controller/bots`: example bot scripts
 
+<<<<<<< HEAD
 
+=======
+## Notes on Compatibility
+
+This simulator follows the same movement rules and command protocol as the
+original mms project, including half-step movement and diagonal turns. Maze
+parsing logic and wall consistency checks are modeled after the original.
+
+## UI Tips
+
+- Use **Edit action** to switch between wall editing, setting the start cell, or
+  setting the goal cell by clicking on the maze.
+- The **Bot Runner** dropdown lists all scripts in `controller/bots`. Pick one
+  and the command/directory fields are filled automatically.
+- The simulator pauses and stops the bot when the goal is reached (success log).
+
+## Included Bots
+
+- `controller/bots/flood_fill.py`
+- `controller/bots/pledge.py`
+- `controller/bots/right_wall.py`
+- `controller/bots/left_wall.py`
+- `controller/bots/random_walk.py`
+
+Use the Bot Runner dropdown to pick one; the command and directory fields fill in automatically.
+>>>>>>> ea7b6d2 (Add Hadak micromouse simulator v2)
