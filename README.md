@@ -1,19 +1,5 @@
 # Hadak Micromouse Studio (v1.11.34)
 
-A fresh UI + architecture for a Micromouse simulator that preserves the same
-controller protocol and maze formats as the original mms project.
-
-## Features
-
-- Same bot/controller API and maze formats as the original simulator
-- New UI layout with live debug panel, overlays, and event log
-- Step/Play/Pause controls + speed slider
-- Load/save mazes in `.map` / `.num` formats
-- Random maze generation with deterministic seed
-- Click-to-edit maze walls
-- Example flood-fill bot
-- Core engine tests (movement, collision, parsing, generation)
-
 ## Prerequisites (Ubuntu)
 
 - Qt 6 (qmake + Qt Widgets)
@@ -63,7 +49,7 @@ make
 ../bin/tests
 ```
 
-## Controller API (same as original)
+## Controller API 
 
 Bots communicate via stdin/stdout. Valid commands include:
 
@@ -98,7 +84,7 @@ Then click **Start Bot** and **Play**.
 
 ## Maze formats
 
-- `.map` ASCII format (same as the original mms)
+- `.map` ASCII format 
 - `.num` format: `X Y N E S W` (1 = wall, 0 = open)
 
 ## Project Structure
@@ -109,8 +95,4 @@ Then click **Start Bot** and **Play**.
 - `tests`: engine tests
 - `controller/bots`: example bot scripts
 
-## Notes on Compatibility
 
-This simulator follows the same movement rules and command protocol as the
-original mms project, including half-step movement and diagonal turns. Maze
-parsing logic and wall consistency checks are modeled after the original.
