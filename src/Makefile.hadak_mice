@@ -2239,18 +2239,34 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QCheckBox \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qcheckbox.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qabstractbutton.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QComboBox \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qcombobox.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtGui/qvalidator.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtCore/qregularexpression.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qslider.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qstyle.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtCore/QCoreApplication \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/QDateTime \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qdatetime.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qcalendar.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QFileDialog \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qfiledialog.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtCore/QDir \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qdir.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qdirlisting.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qfile.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qfileinfo.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/qtimezone.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QFileDialog \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qfiledialog.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qdialog.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtCore/QFileInfo \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QGridLayout \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qgridlayout.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qlayout.h \
@@ -2269,16 +2285,11 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qpushbutton.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QSlider \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qslider.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qabstractslider.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QSpinBox \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qspinbox.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtGui/qvalidator.h \
-		../../../../Qt/6.10.1/gcc_64/include/QtCore/qregularexpression.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtGui/QShortcut \
 		../../../../Qt/6.10.1/gcc_64/include/QtGui/qshortcut.h \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QSlider \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QSpinBox \
+		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qspinbox.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/QSplitter \
 		../../../../Qt/6.10.1/gcc_64/include/QtWidgets/qsplitter.h \
 		../../../../Qt/6.10.1/gcc_64/include/QtCore/QTextStream \

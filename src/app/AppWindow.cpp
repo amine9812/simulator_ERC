@@ -255,9 +255,32 @@ void AppWindow::connectSignals() {
 }
 
 QString AppWindow::repoRoot() const {
+  auto isRepoRoot = [](const QDir &dir) {
+    return dir.exists("controller/bots") && dir.exists("src") &&
+           dir.exists("hadak_mice.pro");
+  };
+
   QDir dir(QCoreApplication::applicationDirPath());
-  dir.cdUp();
-  return dir.absolutePath();
+  for (int i = 0; i < 6; ++i) {
+    if (isRepoRoot(dir)) {
+      return dir.absolutePath();
+    }
+    if (!dir.cdUp()) {
+      break;
+    }
+  }
+
+  QDir cwd(QDir::currentPath());
+  for (int i = 0; i < 6; ++i) {
+    if (isRepoRoot(cwd)) {
+      return cwd.absolutePath();
+    }
+    if (!cwd.cdUp()) {
+      break;
+    }
+  }
+
+  return QDir::currentPath();
 }
 
 void AppWindow::refreshBotList() {
@@ -301,12 +324,20 @@ bool AppWindow::startBot(bool quiet) {
   if (m_bot.isRunning()) {
     return true;
   }
+  m_controller.resetState();
   QString cmd = m_botCommand->text().trimmed();
   QString dir = m_botDir->text().trimmed();
   if (cmd.isEmpty() || dir.isEmpty()) {
     if (!quiet) {
       QMessageBox::warning(this, "Bot", "Command and directory are required");
     }
+    return false;
+  }
+  if (!QDir(dir).exists()) {
+    if (!quiet) {
+      QMessageBox::warning(this, "Bot", "Working directory not found");
+    }
+    writeLog(QString("Bot start failed: missing directory %1").arg(dir));
     return false;
   }
   if (!m_bot.start(cmd, dir)) {
@@ -557,7 +588,7 @@ void AppWindow::onBotSelectionChanged(int index) {
   if (file.isEmpty()) {
     return;
   }
-  m_botCommand->setText(QString("python3 controller/bots/%1").arg(file));
+  m_botCommand->setText(QString("python3 -u controller/bots/%1").arg(file));
   m_botDir->setText(repoRoot());
 }
 
